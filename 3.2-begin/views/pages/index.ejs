@@ -1,0 +1,31 @@
+<% include ../partials/meta.ejs %>
+<title>Welcome</title>
+<% include ../partials/header.ejs %>
+  
+<% 
+if (typeof nume !== 'undefined'){
+%>
+ <h1> Welcome <%= nume %> </h1>
+ <form action="/goodbye" , method="POST">
+ <button >LogOut</button>
+
+</form>
+<% 
+}
+%>
+<% 
+if(typeof nume ==='undefined'){
+  %>
+  <h1> Welcome Student!</h1>
+  <%
+}
+%>
+  <div class="row">
+    
+    <h1 id='name'></h1>
+    <div class="col-md-12 text-center">
+      <img src= "/static/keep_calm.gif" > 
+    </div>
+  </div>
+
+<% include ../partials/footer.ejs %>
