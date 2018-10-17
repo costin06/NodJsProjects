@@ -13,7 +13,13 @@
       <% } else { %>
         <h1>Welcome, student!</h1>       
       <% } %>
-    
+
+      <% if (typeof mesaj !== 'undefined') { %>
+        <h1>Acesta este mesajul : <%= mesaj%> </h1>
+        <% } else { %>
+          <h1>Mesaj???</h1>       
+        <% } %>
+      <%success%>
       <div class="mt-4">
         <img src= "/static/keep_calm.gif" >
       </div>
